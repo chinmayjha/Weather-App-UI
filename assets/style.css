@@ -1,0 +1,177 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #3498db, #2c3e50); /* Background gradient */
+}
+
+.weather-app {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background color with opacity */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+    animation: fadeIn 1s; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.location {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #34495e; /* Text color */
+}
+
+.temperature {
+    font-size: 60px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-temp {
+    font-weight: bold;
+    font-size: 36px; /* Larger font size */
+    color: #e74c3c; /* Temperature color */
+}
+
+.min-max-temp {
+    font-size: 16px;
+    color: #7f8c8d; /* Subtle text color */
+    margin-top: 5px;
+}
+
+.description {
+    font-size: 34px;
+    font-weight: bold;
+    color: #2c3e50;
+    position: relative;
+    top: 25px;
+    left: 2rem;
+}
+
+.icon {
+    font-size: 60px;
+    margin: -30px 11rem -29px -31px;
+    color: #f39c12; /* Icon color */
+}
+.icon:hover{
+    animation: rotate 1s linear;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.details,
+.more-details {
+    margin-top: 25px;
+}
+
+.detail-button {
+    background-color: #3498db; /* Button color */
+    color: #fff; /* Text color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.detail-button:hover {
+    background-color: #2980b9; /* Button color on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif !important;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: salmon;
+}
+
+/* Heart emoji and hover effect */
+.footer p {
+    position: relative;
+    display: inline-block;
+}
+
+.heart {
+    cursor: pointer;
+}
+
+.heart:hover::before {
+    content: 'LOVE';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+    color: black;
+    font-size: 12px;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.heart::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 192, 203, 0.9); /* Light pink background */
+    color: black;
+    font-size: 12px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 600px) {
+    footer {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+}
